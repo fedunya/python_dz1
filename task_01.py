@@ -7,16 +7,13 @@
 
 import os
 os.system("cls")
-while True:
+a = '1234567'
+num_weekday = input('Введите порядковый номер дня недели от 1 до 7: ')
+while num_weekday not in a:
+    print('Ошибка, повторите ввод')
     num_weekday = input('Введите порядковый номер дня недели от 1 до 7: ')
-    if not num_weekday.isnumeric():
-        print("Введено не число, повторите ввод")
-    elif not 0 < int(num_weekday) < 8:
-        print("Ваше число не диапазоне, повторите ввод")
-    else:
-        break
 num_weekday = int(num_weekday)
-if num_weekday == 6 or num_weekday == 7:
+if 5 < num_weekday < 8:
     print('Это выходной? Да')
 else:
     print('Это выходной? Нет')
